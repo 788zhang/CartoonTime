@@ -1,0 +1,488 @@
+{
+code = 0;
+error = "";
+extraInfo =     {
+countTotal = 17169;
+};
+params =     {
+"REQUEST_METHOD" = GET;
+clientversion = 0;
+clientversionAd = 0;
+messageOffStatus = 1;
+page = 1;
+r = "message/list";
+size = 10;
+};
+results =     (
+{
+author = "\U6b87\U4e4b\U4e03\U591c";
+bad = 0;
+contentCount = 3;
+createTime = "2016-03-03 11:15:16";
+createTimeValue = "1\U5c0f\U65f6\U524d";
+divisionID = "";
+fbDate = "";
+games = "";
+gamesID = 0;
+good = 0;
+id = 17441;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/abda4f5f277837c57a1b9f778f3bbd19_21340.png?imageView2/2/q/80";
+imagesCount = 9;
+introduction = "";
+isPraise = 0;
+keyword = "\U5931\U8d25,\U6492\U8c0e";
+label = "\U5fae\U535a,\U641e\U7b11";
+level = 0;
+modifyTime = "";
+offStatus = 1;
+position = "";
+praiseCount = 6;
+score = "";
+shareContent = "";
+shareUrl = "http://api.playsm.com/index.php?r=message/rtfContent&id=17441";
+shoppingDate = "2016-03-03 10:11:00";
+showTime = "2016-03-03 20:10:00";
+sourceID = "";
+sourceType = 0;
+sourceUrl = "";
+specialID = "";
+status = 1;
+textType = 3;
+title = "\U4f60\U6492\U8fc7\U7684\U6700\U5931\U8d25\U7684\U4e00\U6b21\U8c0e\U662f\U4ec0\U4e482333\U770b\U5b8c\U7b11\U5c3f\U4e86";
+unionType = 1;
+userID = 38;
+userIDInfo =             {
+id = 38;
+informCount = 0;
+name = "\U6b87\U4e4b\U4e03\U591c";
+sex = 1;
+};
+viewCount = 0;
+},
+{
+author = "\U884c\U8d70\U7684\U8089";
+bad = 0;
+contentCount = 0;
+createTime = "2016-03-03 11:54:28";
+createTimeValue = "1\U5c0f\U65f6\U524d";
+divisionID = "";
+fbDate = "";
+games = "";
+gamesID = 0;
+good = 0;
+id = 17454;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/f001964c7146124451c7729439de54c4_24848.jpeg?imageView2/2/q/80";
+imagesCount = 2;
+introduction = "\U4f5c\U54c1\U540d
+\n
+\n\U5408\U91d1\U88c5\U59075:\U5e7b\U75db&nbsp;
+\n
+\n\U89d2\U8272
+\nQuiet
+\n
+\n\U5236\U9020\U5546
+\nGecco \U00d7 \U8c46\U9c7c\U96f7&nbsp;
+\n
+\n\U4ef7\U683c
+\n348\U2026\U2026";
+isPraise = 0;
+keyword = "Quiet,\U5408\U91d1\U88c5\U59075";
+label = "\U65b0\U95fb,\U6a21\U578b,\U5408\U91d1\U88c5\U59075";
+level = 0;
+modifyTime = "";
+offStatus = 1;
+position = "";
+praiseCount = 0;
+score = "";
+shareContent = "\U4f5c\U54c1\U540d
+\n
+\n\U5408\U91d1\U88c5\U59075:\U5e7b\U75db&nb\U2026\U2026";
+shareUrl = "http://api.playsm.com/index.php?r=message/rtfContent&id=17454";
+shoppingDate = "2016-03-03 10:53:00";
+showTime = "2016-03-03 19:52:00";
+sourceID = "";
+sourceType = 0;
+sourceUrl = "";
+specialID = "";
+status = 1;
+textType = 3;
+title = "\U300a\U5408\U91d1\U88c5\U59075\U300bQuiet\U624b\U529e\U4eca\U65e5\U5f00\U8ba2";
+unionType = 1;
+userID = 42513;
+userIDInfo =             {
+id = 42513;
+informCount = 0;
+name = "\U884c\U8d70\U7684\U8089";
+sex = 2;
+};
+viewCount = 0;
+},
+{
+author = "\U6b87\U4e4b\U4e03\U591c";
+bad = 0;
+contentCount = 0;
+createTime = "2016-03-03 12:57:39";
+createTimeValue = "1\U5c0f\U65f6\U524d";
+divisionID = "";
+fbDate = "";
+games = "";
+gamesID = 0;
+good = 0;
+id = 17467;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/a22feade097f6fb2bb5f59eb7b3d0231_7497.jpeg?imageView2/2/q/80";
+imagesCount = 5;
+introduction = "\U4e3a\U4ec0\U4e48\U53ef\U7231\U7684\U5c0f\U72d7\U4f60\U4eec\U5c31\U60f3\U5230\U667a\U969c\U4e8623333\U8fd8\U4e0d\U6b62\U4e00\U4e2a\U4eba\U8fd9\U6837\U60f3";
+isPraise = 0;
+keyword = "\U667a\U969c,\U8ba1\U7b97\U673a\U8bfe";
+label = "\U5fae\U535a,\U641e\U7b11";
+level = 0;
+modifyTime = "";
+offStatus = 1;
+position = "";
+praiseCount = 9;
+score = "";
+shareContent = "\U4e3a\U4ec0\U4e48\U53ef\U7231\U7684\U5c0f\U72d7\U4f60\U4eec\U5c31\U60f3\U5230\U667a\U969c\U4e8623\U2026\U2026";
+shareUrl = "http://api.playsm.com/index.php?r=message/rtfContent&id=17467";
+shoppingDate = "2016-03-03 10:11:00";
+showTime = "2016-03-03 19:51:00";
+sourceID = "";
+sourceType = 0;
+sourceUrl = "";
+specialID = "";
+status = 1;
+textType = 3;
+title = "\U8fd9\U5802\U8ba1\U7b97\U673a\U8bfe\U5c31\U662f\U4e00\U5806\U7684\U667a\U969c\Uff01";
+unionType = 1;
+userID = 38;
+userIDInfo =             {
+id = 38;
+informCount = 0;
+name = "\U6b87\U4e4b\U4e03\U591c";
+sex = 1;
+};
+viewCount = 0;
+},
+{
+author = "\U884c\U8d70\U7684\U8089";
+bad = 0;
+contentCount = 5;
+createTime = "2016-03-03 14:54:47";
+createTimeValue = "1\U5c0f\U65f6\U524d";
+divisionID = "";
+fbDate = "";
+games = "";
+gamesID = 0;
+good = 0;
+id = 17485;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/eb9b61d8f1d97e47d5bf6d3867645c3f_215517.png?imageView2/2/q/80";
+imagesCount = 4;
+introduction = "\U8fd9\U4f4d\U65e5\U672c\U73ed\U4e3b\U4efb\U6700\U521d\U770b\U5230\U5b66\U751f\U7528\U5916\U8bed\U5199\U65e5\U5fd7\U65f6\Uff0c\U4ed6\U662f\U62d2\U7edd\U7684\U3002\U4ed6\U751f\U6c14\U5730\U8868\U793a\Uff1a\U4e0d\U77e5\U9053\U5199\U4e86\U4ec0\U4e48\Uff01\Uff01\U7ffb\U5012\U662f\U8bd1\U4e00\U4e0b\U554a\Uff01\Uff01
+\n
+\n
+\n\t
+\n
+\n
+\n
+\n\t\U4f46\U540e\U6765\U2026\U2026";
+isPraise = 0;
+keyword = "\U5916\U8bed";
+label = "\U5fae\U535a,\U8da3\U95fb";
+level = 0;
+modifyTime = "";
+offStatus = 1;
+position = "";
+praiseCount = 4;
+score = "";
+shareContent = "\U8fd9\U4f4d\U65e5\U672c\U73ed\U4e3b\U4efb\U6700\U521d\U770b\U5230\U5b66\U751f\U7528\U5916\U8bed\U5199\U65e5\U2026\U2026";
+shareUrl = "http://api.playsm.com/index.php?r=message/rtfContent&id=17485";
+shoppingDate = "2016-03-03 14:43:00";
+showTime = "2016-03-03 19:45:00";
+sourceID = "";
+sourceType = 0;
+sourceUrl = "";
+specialID = "";
+status = 1;
+textType = 3;
+title = "\U8001\U5e08\U6765\U561b~\U4e00\U8d77\U55e8\Uff01";
+unionType = 1;
+userID = 42513;
+userIDInfo =             {
+id = 42513;
+informCount = 0;
+name = "\U884c\U8d70\U7684\U8089";
+sex = 2;
+};
+viewCount = 0;
+},
+{
+author = "\U6f06\U539f\U9759\U4e43";
+bad = 0;
+contentCount = 0;
+createTime = "2016-03-03 14:42:05";
+createTimeValue = "1\U5c0f\U65f6\U524d";
+divisionID = "";
+fbDate = "";
+games = "";
+gamesID = 0;
+good = 0;
+id = 17480;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/e1fe14879cc2ce341517d264e0d8cd69_46411.jpeg?imageView2/2/q/80";
+imagesCount = 8;
+introduction = "";
+isPraise = 0;
+keyword = "\U641e\U7b11";
+label = "\U5fae\U535a,\U641e\U7b11";
+level = 0;
+modifyTime = "";
+offStatus = 1;
+position = "";
+praiseCount = 8;
+score = "";
+shareContent = "";
+shareUrl = "http://api.playsm.com/index.php?r=message/rtfContent&id=17480";
+shoppingDate = "2016-03-03 14:38:00";
+showTime = "2016-03-03 19:45:00";
+sourceID = "";
+sourceType = 0;
+sourceUrl = "";
+specialID = "";
+status = 1;
+textType = 3;
+title = "\U4e00\U8d77\U611f\U53d7\U4e0b\U5916\U56fd\U670b\U53cb\U5bf9\U4e2d\U56fd\U82f1\U8bed\U9ad8\U8003\U8bd5\U5377\U7684\U770b\U6cd5";
+unionType = 1;
+userID = 46454;
+userIDInfo =             {
+id = 46454;
+informCount = 0;
+name = "\U6f06\U539f\U9759\U4e43";
+sex = 1;
+};
+viewCount = 0;
+},
+{
+author = "\U884c\U8d70\U7684\U8089";
+bad = 0;
+contentCount = 0;
+createTime = "2016-03-02 17:35:24";
+createTimeValue = "2\U5c0f\U65f6\U524d";
+divisionID = "";
+fbDate = "";
+games = "";
+gamesID = 0;
+good = 0;
+id = 17392;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/8d2ea48ad1573bdf261c0c865b775bf6_4601720.gif?imageView2/2/q/80";
+imagesCount = 6;
+introduction = "\U5200\U5251\U7684\U94f6\U9b42OP paro\U3010\U6a31\U6ee1\U6708\U3011\U4e0d\U4ec5\U4ec5\U662f\U5236\U4f5c\U4f18\U826f\Uff0c\U8fde\U6700\U65b0\U7684\U5200\U90fd\U53c2\U6f14\U4e86\Uff0c\U5e05\U54ed\Uff01\U6709\U6761\U4ef6\U7ffb\U5899\U7684\U8bdd\U53ef\U4ee5\U53bbnico\U4e0a\U770b\Uff1ahttp://www.nico\U2026\U2026";
+isPraise = 0;
+keyword = "\U5200\U5251\U4e71\U821e,\U5927\U89e6,\U94f6\U9b42";
+label = "\U5fae\U535a,\U5927\U89e6,\U5200\U5251\U4e71\U821e";
+level = 0;
+modifyTime = "";
+offStatus = 1;
+position = "";
+praiseCount = 4;
+score = "";
+shareContent = "\U5200\U5251\U7684\U94f6\U9b42OP paro\U3010\U6a31\U6ee1\U6708\U3011\U4e0d\U2026\U2026";
+shareUrl = "http://api.playsm.com/index.php?r=message/rtfContent&id=17392";
+shoppingDate = "2016-03-02 17:14:00";
+showTime = "2016-03-03 19:19:00";
+sourceID = "";
+sourceType = 0;
+sourceUrl = "";
+specialID = "";
+status = 1;
+textType = 3;
+title = "\U89e6\U4e0d\U53ef\U53ca\Uff01\U7f51\U53cb\U5236\U4f5c\U300a\U5200\U5251\U4e71\U821e\U300b\U94f6\U9b42op paro\U89c6\U9891";
+unionType = 1;
+userID = 42513;
+userIDInfo =             {
+id = 42513;
+informCount = 0;
+name = "\U884c\U8d70\U7684\U8089";
+sex = 2;
+};
+viewCount = 0;
+},
+{
+author = "\U6f06\U539f\U9759\U4e43";
+bad = 0;
+contentCount = 4;
+createTime = "2016-03-03 16:32:16";
+createTimeValue = "2\U5c0f\U65f6\U524d";
+divisionID = "";
+fbDate = "";
+games = "";
+gamesID = 0;
+good = 0;
+id = 17525;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/5e4b56954d9381d1ab1a43884409548a_39792.jpeg?imageView2/2/q/80";
+imagesCount = 1;
+introduction = "\U4f5c\U8005\U4f60\U8fd9\U8111\U6d1e\Uff0c\U6211\U7ed9\U4f6082\U5206\Uff0c\U5269\U4e0b18\U5206\U7ed9\U4f60666";
+isPraise = 0;
+keyword = "\U8111\U6d1e,\U8282\U64cd";
+label = "\U5fae\U535a,\U8111\U6d1e,\U8282\U64cd";
+level = 0;
+modifyTime = "";
+offStatus = 1;
+position = "";
+praiseCount = 12;
+score = "";
+shareContent = "\U4f5c\U8005\U4f60\U8fd9\U8111\U6d1e\Uff0c\U6211\U7ed9\U4f6082\U5206\Uff0c\U5269\U4e0b18\U2026\U2026";
+shareUrl = "http://api.playsm.com/index.php?r=message/rtfContent&id=17525";
+shoppingDate = "2016-03-03 16:28:00";
+showTime = "2016-03-03 18:50:00";
+sourceID = "";
+sourceType = 0;
+sourceUrl = "";
+specialID = "";
+status = 1;
+textType = 3;
+title = "\U672c\U6765\U8fd8\U4ee5\U4e3a\U662f\U767e\U5408\Uff0c\U6ca1\U60f3\U5230\U7adf\U662f\U2026";
+unionType = 1;
+userID = 46454;
+userIDInfo =             {
+id = 46454;
+informCount = 0;
+name = "\U6f06\U539f\U9759\U4e43";
+sex = 1;
+};
+viewCount = 0;
+},
+{
+author = "\U5c71\U6cbb\U541b\U662f\U6211\U6ca1\U9519";
+bad = 0;
+contentCount = 3;
+createTime = "2016-03-03 15:44:20";
+createTimeValue = "2\U5c0f\U65f6\U524d";
+divisionID = "";
+fbDate = "";
+games = "";
+gamesID = 0;
+good = 0;
+id = 17510;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/355df4728ddf75f71022ae8db439d16c_29987.jpeg?imageView2/2/q/80";
+imagesCount = 7;
+introduction = "\U6cf0\U8fea\U718a\U300cTed \U300dfigma\U5316\Uff01\U53ef\U52a8\U624b\U529e3\U67083\U65e5\U8d77\U9884\U7ea6\U5f00\U59cb\Uff0c7\U6708\U53d1\U552e\U3002\U9644\U5c5e\U9152\U74f6\U548c\U8bd5\U7ba1\U53ef\U518d\U73b0\U5267\U4e2d\U573a\U666f\Uff0cAmazon\U7279\U5178\U4e3a\U56f4\U88d9\U3002";
+isPraise = 0;
+keyword = "\U6cf0\U8fea\U718a,\U624b\U529e";
+label = "\U5fae\U535a,\U624b\U529e\U6a21\U578b";
+level = 0;
+modifyTime = "";
+offStatus = 1;
+position = "";
+praiseCount = 2;
+score = "";
+shareContent = "\U6cf0\U8fea\U718a\U300cTed \U300dfigma\U5316\Uff01\U53ef\U52a8\U2026\U2026";
+shareUrl = "http://api.playsm.com/index.php?r=message/rtfContent&id=17510";
+shoppingDate = "2016-03-03 15:39:00";
+showTime = "2016-03-03 18:41:00";
+sourceID = "";
+sourceType = 0;
+sourceUrl = "";
+specialID = "";
+status = 1;
+textType = 2;
+title = "\U6cf0\U8fea\U718a\U300cTed \U300dfigma\U5316\Uff01\U53ef\U52a8\U624b\U529e\U9884\U7ea6\U5f00\U59cb\Uff01";
+unionType = 1;
+userID = 49403;
+userIDInfo =             {
+id = 49403;
+informCount = 0;
+name = "\U5c71\U6cbb\U541b\U662f\U6211\U6ca1\U9519";
+sex = 2;
+};
+viewCount = 0;
+},
+{
+author = "\U6b87\U4e4b\U4e03\U591c";
+bad = 0;
+contentCount = 0;
+createTime = "2016-03-03 10:32:59";
+createTimeValue = "2\U5c0f\U65f6\U524d";
+divisionID = "";
+fbDate = "";
+games = "";
+gamesID = 0;
+good = 0;
+id = 17420;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/6e0f4359501e8bd07415793cc2cc00fe_22570.jpeg?imageView2/2/q/80";
+imagesCount = 9;
+introduction = "";
+isPraise = 0;
+keyword = "\U5e0c\U62c9\U91cc,\U8868\U60c5\U5305";
+label = "\U5fae\U535a,\U641e\U7b11";
+level = 0;
+modifyTime = "";
+offStatus = 1;
+position = "";
+praiseCount = 3;
+score = "";
+shareContent = "";
+shareUrl = "http://api.playsm.com/index.php?r=message/rtfContent&id=17420";
+shoppingDate = "2016-03-03 10:11:00";
+showTime = "2016-03-03 18:28:00";
+sourceID = "";
+sourceType = 0;
+sourceUrl = "";
+specialID = "";
+status = 1;
+textType = 3;
+title = "\U5e0c\U62c9\U91cc\U00b7\U514b\U6797\U987f\U80fd\U5426\U5f53\U4e0a\U7f8e\U56fd\U603b\U7edf\U8fd8\U4e0d\U77e5\U9053\Uff0c\U4f46\U5979\U663e\U7136\U5f88\U6709\U6f5c\U529b\U6210\U4e3a\U8868\U60c5\U5305\U5973\U738b";
+unionType = 1;
+userID = 38;
+userIDInfo =             {
+id = 38;
+informCount = 0;
+name = "\U6b87\U4e4b\U4e03\U591c";
+sex = 1;
+};
+viewCount = 0;
+},
+{
+author = "\U6f06\U539f\U9759\U4e43";
+bad = 0;
+contentCount = 4;
+createTime = "2016-03-03 16:28:07";
+createTimeValue = "2\U5c0f\U65f6\U524d";
+divisionID = "";
+fbDate = "";
+games = "";
+gamesID = 0;
+good = 0;
+id = 17524;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/9450880abc6ac380e72cd4503acbb28e_65062.jpeg?imageView2/2/q/80";
+imagesCount = 4;
+introduction = "\U4e0a\U4e2a\U6708\U8054\U5408\U56fd\U4eba\U6743\U7406\U4e8b\U4f1a\U4e0b\U5c5e\U7684\U5973\U6027\U6b67\U89c6\U6d88\U9664\U59d4\U5458\U4f1a\U6b63\U5f0f\U5f00\U4f1a\U4e13\U95e8\U5ba1\U8bae\U300e\U65e5\U672c\U5973\U6027\U6743\U5229\U95ee\U9898\U300f\Uff0c\U70ae\U8f70\U65e5\U672c\U5bf9\U4e8e\U6d89\U53ca\U513f\U7ae5\U8272\U60c5\U7684\U6210\U4eba\U6f2b\U753b\U548c\U6e38\U620f\U89c6\U800c\U4e0d\U89c1\U4e0d\U52a0\U4ee5\U4efb\U4f55\U2026\U2026";
+isPraise = 0;
+keyword = "\U65b0\U95fb";
+label = "\U5fae\U535a,\U65b0\U95fb";
+level = 0;
+modifyTime = "";
+offStatus = 0;
+position = "";
+praiseCount = 9;
+score = "";
+shareContent = "\U4e0a\U4e2a\U6708\U8054\U5408\U56fd\U4eba\U6743\U7406\U4e8b\U4f1a\U4e0b\U5c5e\U7684\U5973\U6027\U6b67\U89c6\U2026\U2026";
+shareUrl = "http://api.playsm.com/index.php?r=message/rtfContent&id=17524";
+shoppingDate = "2016-03-03 16:19:00";
+showTime = "2016-03-03 18:26:00";
+sourceID = "";
+sourceType = 0;
+sourceUrl = "";
+specialID = "";
+status = 1;
+textType = 3;
+title = "\U8fd9\U903b\U8f91\U6ee1\U5206\Uff01\U65e5\U672c\U5973\U6027\U56e2\U4f53\U79f0\U6210\U4eba\U6f2b\U753b\U548c\U6e38\U620f\U624d\U662f\U4fdd\U62a4\U5973\U6027\U6743\U5229";
+unionType = 1;
+userID = 46454;
+userIDInfo =             {
+id = 46454;
+informCount = 0;
+name = "\U6f06\U539f\U9759\U4e43";
+sex = 1;
+};
+viewCount = 0;
+}
+);
+}

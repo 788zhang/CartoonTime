@@ -1,0 +1,173 @@
+{
+code = 0;
+error = "";
+extraInfo =     {
+countTotal = 13;
+otherTitle = "";
+otherType = 0;
+};
+params =     {
+"REQUEST_METHOD" = GET;
+page = 1;
+r = "cartoonCategory/list";
+size = 999;
+};
+results =     (
+{
+createTime = "2015-10-27 16:26:34";
+id = 21;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/3b1a97fbde3f1fbf77e47f8ddae63bf6_56427.jpeg";
+modifyTime = "2015-10-27 16:26:34";
+name = "\U6700\U65b0\U4e0a\U67b6";
+priority = 1;
+remark = "";
+status = 1;
+useType = 1;
+userID = "";
+},
+{
+createTime = "2015-10-27 16:25:16";
+id = 20;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/1524fa5f9a35595811f56bf2991339c7_53384.jpeg";
+modifyTime = "2015-10-27 16:17:50";
+name = "\U6700\U65b0\U66f4\U65b0";
+priority = 1;
+remark = "";
+status = 1;
+useType = 1;
+userID = "";
+},
+{
+createTime = "2015-12-07 15:30:36";
+id = 19;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/14673c025523ff504e9572bc31e44be4_38872.jpeg";
+modifyTime = "2015-12-07 15:30:36";
+name = "\U5b8c\U7ed3\U6f2b\U753b";
+priority = 1;
+remark = "";
+status = 1;
+useType = 1;
+userID = "";
+},
+{
+createTime = "2015-10-30 12:41:28";
+id = 2;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/255bc6ca8af972f16c8bdb27ab71bea4_38355.jpeg";
+modifyTime = "2015-10-30 12:41:28";
+name = "\U5c11\U5973\U00b7\U7231\U60c5";
+priority = 2;
+remark = "";
+status = 1;
+useType = 0;
+userID = "";
+},
+{
+createTime = "2015-10-30 12:41:37";
+id = 1;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/cd8a16e23b483a01000ce7a6d460ac7a_31930.jpeg";
+modifyTime = "2015-10-30 12:41:37";
+name = "\U5c11\U5e74\U00b7\U70ed\U8840";
+priority = 3;
+remark = "";
+status = 1;
+useType = 0;
+userID = "";
+},
+{
+createTime = "2015-10-27 15:50:23";
+id = 14;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/b6d2a3191f9852be83cb919849bf21a8_38796.jpeg";
+modifyTime = "2015-10-27 15:50:23";
+name = "\U803d\U7f8e";
+priority = 4;
+remark = "";
+status = 1;
+useType = 0;
+userID = "";
+},
+{
+createTime = "2015-10-30 12:41:46";
+id = 5;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/7f8ecd4c2780cd80e703f0a680158b20_29749.jpeg";
+modifyTime = "2015-10-30 12:41:46";
+name = "\U5e7d\U9ed8\U00b7\U641e\U7b11";
+priority = 5;
+remark = "";
+status = 1;
+useType = 0;
+userID = "";
+},
+{
+createTime = "2015-10-30 12:41:53";
+id = 7;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/a9f868057411c95a7410d1f1c0b81ca9_23526.jpeg";
+modifyTime = "2015-10-30 12:41:53";
+name = "\U4fa6\U63a2\U00b7\U63a8\U7406";
+priority = 6;
+remark = "";
+status = 1;
+useType = 0;
+userID = "";
+},
+{
+createTime = "2015-10-30 14:38:45";
+id = 23;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/2d764a1c065dceb44dbccbf99b25e656_52659.jpeg";
+modifyTime = "2015-10-30 14:38:45";
+name = "\U5192\U9669\U00b7\U52a8\U4f5c";
+priority = 7;
+remark = "";
+status = 1;
+useType = 0;
+userID = 10;
+},
+{
+createTime = "2015-10-30 12:40:55";
+id = 4;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/0ff62c837decf265adaa91d5ef04b5ab_50078.jpeg";
+modifyTime = "2015-10-30 12:40:55";
+name = "\U79d1\U5e7b\U00b7\U5947\U5e7b";
+priority = 8;
+remark = "";
+status = 1;
+useType = 0;
+userID = "";
+},
+{
+createTime = "2015-10-30 12:42:11";
+id = 22;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/0846debaba4cd0ec6fbea108040a2ab3_13330.jpeg";
+modifyTime = "2015-10-30 12:42:11";
+name = "\U6050\U6016\U00b7\U60ac\U7591";
+priority = 9;
+remark = "";
+status = 1;
+useType = 0;
+userID = 1;
+},
+{
+createTime = "2015-10-30 12:42:18";
+id = 8;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/da4af523c10025fe1abaf9e282446189_43654.jpeg";
+modifyTime = "2015-10-30 12:42:18";
+name = "\U6821\U56ed";
+priority = 10;
+remark = "";
+status = 1;
+useType = 0;
+userID = "";
+},
+{
+createTime = "2015-10-27 16:28:50";
+id = 16;
+images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/5b5b92e1e05aab987d550260278abe6a_34521.jpeg";
+modifyTime = "2015-10-27 16:28:50";
+name = "\U65e5\U5e38";
+priority = 11;
+remark = "";
+status = 1;
+useType = 0;
+userID = "";
+}
+);
+}
