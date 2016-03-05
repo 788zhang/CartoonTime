@@ -8,15 +8,29 @@
 
 #import "ClassSeondViewController.h"
 #import "ClassModel.h"
+#import "MJRefresh.h"
+#import "ClassCollectionViewCell.h"
+
 
 
 
 
 @interface ClassSeondViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+{
+    
+    NSInteger  _pageCount;
+    
+}
+//刷新控件
+
+
+@property(nonatomic, assign) BOOL isRefresh;
 @property(nonatomic, strong) UICollectionView *collectionView;
 
 @property(nonatomic, strong) NSMutableArray *cellArr;
 
+
+//刷新
 
 @end
 
@@ -26,19 +40,87 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.navigationItem.title=self.model.name;
+    self.automaticallyAdjustsScrollViewInsets=NO;
+
     [self showBarButtonWithImage:@"back"];
     
+    
+    _pageCount=1;
+    
    
-    
-    
     [self getNetData];
+    
+    
+    // 下拉刷新
+    self.collectionView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        // 增加数据
+    [self.collectionView.mj_header beginRefreshing];
+        
+       _pageCount=1;
+        
+        self.isRefresh=YES;
+        [self getNetData];
+        
+        
+        ZPFLog(@"下拉刷新");
+        [self.collectionView.mj_header endRefreshing];
+        
+    }];
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // 上拉刷新
+    self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        [self.collectionView.mj_footer beginRefreshing];
+        
+        
+        ZPFLog(@"上拉加载");
+        
+        _pageCount+=1;
+        self.isRefresh=NO;
+        [self getNetData];
+        
+        
+        
+        
+        
+        // 结束刷新
+        [self.collectionView.mj_footer endRefreshing];
+        
+        
+        
+    }];
+   
+
+    
+    
     
     
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
 #pragma mark --- lazy Loading
+
+
 
 - (NSMutableArray *)cellArr{
     
@@ -79,13 +161,23 @@
         self.collectionView.backgroundColor=[UIColor whiteColor];
         self.collectionView.delegate=self;
         self.collectionView.dataSource=self;
-        
-        [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"zhang"];
+        self.collectionView.translatesAutoresizingMaskIntoConstraints=NO;
+        self.collectionView.alwaysBounceVertical=YES;
+
+        [self.collectionView registerClass:[ClassCollectionViewCell class] forCellWithReuseIdentifier:@"zhang"];
         
 
     }
     return _collectionView;
 }
+
+
+
+
+
+#pragma mark--DJRefreshDelegate代理
+
+
 
 #pragma mark ----UICollectionViewDataSource代理方法
 
@@ -99,57 +191,20 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    UICollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"zhang" forIndexPath:indexPath];
+    ClassCollectionViewCell *cell=(ClassCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"zhang" forIndexPath:indexPath];
     cell.backgroundColor=[UIColor whiteColor];
     
+    if (cell) {
     
-    UIImageView *imageCell=[[UIImageView alloc]initWithFrame:CGRectMake(2, 0, KScreenWidth/3-5-4, KScreenHeight/3-10-20)];
-    
-    
-    ClassModel *model=self.cellArr[indexPath.row];
-    
-    ZPFLog(@"%@",model);
-    
-    [imageCell sd_setImageWithURL:[NSURL URLWithString:model.images] placeholderImage:nil];
-    
-    imageCell.backgroundColor=[UIColor whiteColor];
-    
-    UILabel *updataLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, imageCell.frame.size.height-20, imageCell.frame.size.width, 20)];
-   
+        ClassModel *model=self.cellArr[indexPath.row];
+        [cell.imageCell sd_setImageWithURL:[NSURL URLWithString:model.images] placeholderImage:nil];
+        cell.updataLabel.text=model.updateInfo;
+        cell.titleLabel.text=model.name;
+
+    }
     
     
-    updataLabel.text=model.updateInfo;
-    updataLabel.textColor=[UIColor whiteColor];
-    updataLabel.backgroundColor=[UIColor blackColor];
-    updataLabel.font=[UIFont systemFontOfSize:14];
-    [imageCell addSubview:updataLabel];
-    
-    
-    [cell.contentView addSubview:imageCell];
-    
-    
-    UILabel *titleLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, cell.frame.size.height-20, cell.frame.size.width, 20)];
-    
-    titleLabel.font=[UIFont systemFontOfSize:14];
-    titleLabel.text=model.name;
-   
-    
-    
-    [cell.contentView addSubview:titleLabel];
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    return cell;
+     return cell;
     
 }
 #pragma mark ---UICollectionViewDelegate
@@ -173,12 +228,19 @@
     
     manager.responseSerializer.acceptableContentTypes=[NSSet setWithObject:@"text/html"];
     
-    [manager GET:[NSString stringWithFormat:@"%@id=%@&page=%@&",KnewOut,self.model.myid,@(1)] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [manager GET:[NSString stringWithFormat:@"%@id=%@&page=%@&",KnewOut,self.model.myid,@(_pageCount)] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         ZPFLog(@"%lld",downloadProgress.totalUnitCount);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         ZPFLog(@"%@",responseObject);
         
         NSDictionary *rootDic=responseObject;
+        
+        if (self.isRefresh) {
+            if (self.cellArr.count>0) {
+                [self.cellArr removeAllObjects];
+            }
+        }
+        
         
         NSArray *resultArr=rootDic[@"results"];
         for (NSDictionary *dic in resultArr) {
@@ -190,10 +252,13 @@
         }
         
         
+        
+        
         ZPFLog(@"%@",self.cellArr);
         
         [self.view addSubview:self.collectionView];
         [self.collectionView reloadData];
+        
         
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

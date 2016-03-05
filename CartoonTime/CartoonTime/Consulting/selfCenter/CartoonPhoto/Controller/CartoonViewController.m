@@ -234,6 +234,8 @@
     
     class.model=self.classArr[indexPath.row];
     
+    
+    
     [self.navigationController pushViewController:class animated:YES];
     
     
@@ -290,6 +292,21 @@
 #pragma mark ---美图
 
 -(void)getPhotoNetData{
+    
+    
+    AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes=[NSSet setWithObject:@"text/html"];
+    [manager GET:KPhoto parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        ZPFLog(@"%lld",downloadProgress.totalUnitCount);
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        ZPFLog(@"%@",responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        ZPFLog(@"%@",error);
+    }];
+    
+    
+    
+    
     
     
     
