@@ -9,18 +9,29 @@
 #import "CartoonViewController.h"
 #import "VOSegmentedControl.h"
 #import "ClassModel.h"
-
 #import "ClassSeondViewController.h"
-
+#import "CartoonCollectionViewCell.h"
+#import "MJRefresh.h"
 
 @interface CartoonViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
+{
+    
+   NSInteger _pageCount;
+    
+}
+
+//刷新控件
+@property(nonatomic, assign) BOOL isRefresh;
 @property(nonatomic, strong) VOSegmentedControl *segement;
 @property(nonatomic, strong) UICollectionView *collection;
 
 
+
+
 @property(nonatomic, strong) NSMutableArray *classArr;
 @property(nonatomic, strong) NSMutableArray *photoArr;
+@property(nonatomic, strong) NSString *urlString;
 
 
 @end
@@ -31,12 +42,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title=@"动漫时代";
-   
+     self.urlString=Kclass;
     [self getClassNetData];
     [self.view addSubview:self.segement];
     
     
     
+
 }
 
 
@@ -86,13 +98,31 @@
         
         layout.sectionInset=UIEdgeInsetsMake(5, 5, 5, 5);
         
-        self.collection=[[UICollectionView alloc]initWithFrame:CGRectMake(0, 100, KScreenWidth, KScreenHeight) collectionViewLayout:layout];
-        
+        self.collection=[[UICollectionView alloc]initWithFrame:CGRectMake(0, 110, KScreenWidth, KScreenHeight) collectionViewLayout:layout];
+        self.collection.scrollEnabled=YES;
         self.collection.backgroundColor=[UIColor whiteColor];
         self.collection.delegate=self;
         self.collection.dataSource=self;
         
-        [self.collection registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"zhang"];
+        //添加轻扫手势
+        
+        UISwipeGestureRecognizer *swipe=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swichController:)];
+        //默认是UISwipeGestureRecognizerDirectionRight
+        swipe.direction=UISwipeGestureRecognizerDirectionLeft;
+    
+       
+        [self.collection addGestureRecognizer:swipe];
+        
+        UISwipeGestureRecognizer *swiperight=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swichController:)];
+        //默认是UISwipeGestureRecognizerDirectionRight
+        swiperight.direction=UISwipeGestureRecognizerDirectionRight;
+        
+        [self.collection addGestureRecognizer:swiperight];
+        
+        
+        
+        
+        [self.collection registerClass:[CartoonCollectionViewCell class] forCellWithReuseIdentifier:@"zhang"];
         
         
     }
@@ -100,7 +130,38 @@
 }
 
 
-
+-(void)swichController:(UISwipeGestureRecognizer *)swipe{
+    
+    ZPFLog(@"%lu",(unsigned long)swipe.direction);
+//    
+//    if (swipe.direction==UISwipeGestureRecognizerDirectionLeft) {
+//        ZPFLog(@"往左清扫");
+//        self.segement.selectedSegmentIndex=0;
+//    }if (swipe.direction==UISwipeGestureRecognizerDirectionRight) {
+//        
+//        ZPFLog(@"往右");
+//        self.segement.selectedSegmentIndex=1;
+//
+//        
+//    }
+    
+    
+    
+    switch (swipe.direction) {
+        case UISwipeGestureRecognizerDirectionLeft:
+            self.segement.selectedSegmentIndex=0;
+            break;
+            
+         case UISwipeGestureRecognizerDirectionRight:
+            self.segement.selectedSegmentIndex=1;
+            break;
+        default:
+            break;
+    }
+    
+    
+    
+}
 
 - (VOSegmentedControl *)segement{
     
@@ -123,6 +184,8 @@
         
         
        
+        
+        
         [self.segement setIndexChangeBlock:^(NSInteger index) {
         
         }];
@@ -140,6 +203,13 @@
     
 }
 
+
+
+
+
+
+
+
 //从0开始
 -(void)segmentCtrlValuechange:(VOSegmentedControl *)segmentCtrl{
     
@@ -147,28 +217,72 @@
     ZPFLog(@"%ld",(long)segmentCtrl.selectedSegmentIndex);
 
     if (segmentCtrl.selectedSegmentIndex==0) {
-        //类别
         
+        //清空所有数据
+        [self.classArr removeAllObjects];
+       
+        [self.collection reloadData];
+        //类别
+        self.urlString=Kclass;
         [self getClassNetData];
         
     }else if (segmentCtrl.selectedSegmentIndex==1){
-        
+        //添加下拉刷新
         //美图
+        //清空所有数据
+        [self.classArr removeAllObjects];
+         self.urlString=KPhoto;
+        [self getClassNetData];
+       
         
-        [self getPhotoNetData];
+        // 下拉刷新
+        self.collection.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            // 增加数据
+            [self.collection.mj_header beginRefreshing];
+            
+            _pageCount=1;
+            
+            self.isRefresh=YES;
+            [self getClassNetData];
+            
+            
+            ZPFLog(@"下拉刷新");
+            [self.collection.mj_header endRefreshing];
+            
+        }];
+        
+        
+        // 上拉刷新
+        self.collection.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+            [self.collection.mj_footer beginRefreshing];
+            
+            
+            ZPFLog(@"上拉加载");
+            
+            _pageCount+=1;
+            self.isRefresh=NO;
+            
+            [self getClassNetData];
+            // 结束刷新
+            [self.collection.mj_footer endRefreshing];
+            
+            
+            
+        }];
+
+        
+        
+        
+        
+       
+       
+        
         
     }
     
     
     
 }
-
-
-
-
-#pragma mark ----美图
-
-
 #pragma mark ----UICollectionViewDataSource代理方法
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -181,48 +295,38 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    UICollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"zhang" forIndexPath:indexPath];
+     CartoonCollectionViewCell*cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"zhang" forIndexPath:indexPath];
     cell.backgroundColor=[UIColor whiteColor];
-    
-    
-    UIImageView *imageCell=[[UIImageView alloc]initWithFrame:CGRectMake(10, 0, KScreenWidth/3-10-20, KScreenWidth/3-10-20)];
     
     ClassModel *model=self.classArr[indexPath.row];
     
+    if ([self.urlString isEqualToString:Kclass]) {
+        
+        
+    [cell.imageCell sd_setImageWithURL:[NSURL URLWithString:model.images] placeholderImage:nil];
+        
+     cell.titleLabel.text=model.name;
+       
+        
+    }else if([self.urlString isEqualToString:KPhoto]){
+    
+    [cell.imageCell sd_setImageWithURL:[NSURL URLWithString:model.images] placeholderImage:nil];
+        
+    cell.titleLabel.text=nil;
+        
+    }
+    
+    
 
-    [imageCell sd_setImageWithURL:[NSURL URLWithString:model.images] placeholderImage:nil];
-    
-    imageCell.backgroundColor=[UIColor whiteColor];
-    imageCell.layer.cornerRadius=(KScreenWidth/3-30)/2;
-    imageCell.clipsToBounds=YES;
-
-    [cell.contentView addSubview:imageCell];
-    
-    
-    UILabel *titleLabel=[[UILabel alloc]initWithFrame:CGRectMake(10, KScreenWidth/3-30, KScreenWidth/3-30, 20)];
-    
-    titleLabel.font=[UIFont systemFontOfSize:16];
-    titleLabel.text=model.name;
-    titleLabel.textAlignment=NSTextAlignmentCenter;
-    
-    
-    [cell.contentView addSubview:titleLabel];
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    return cell;
+     return cell;
     
 }
+
+
+
+
+
+
 #pragma mark ---UICollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -253,13 +357,20 @@
     
     manager.responseSerializer.acceptableContentTypes=[NSSet setWithObject:@"text/html"];
     
-    [manager GET:Kclass parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [manager GET:[NSString stringWithFormat:@"%@page=%@&",self.urlString,@(_pageCount)] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         ZPFLog(@"%lld",downloadProgress.totalUnitCount);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         ZPFLog(@"%@",responseObject);
         NSDictionary *rootDic=responseObject;
         
         NSArray *resultArr=rootDic[@"results"];
+        
+        
+        if (self.isRefresh) {
+            if (self.classArr.count>0) {
+                [self.classArr removeAllObjects];
+            }
+        }
         
         for (NSDictionary *dic in resultArr) {
             
@@ -278,6 +389,8 @@
         
         
         [self.view addSubview:self.collection];
+        [self.collection reloadData];
+
         
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -289,29 +402,6 @@
     
 }
 
-#pragma mark ---美图
-
--(void)getPhotoNetData{
-    
-    
-    AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
-    manager.responseSerializer.acceptableContentTypes=[NSSet setWithObject:@"text/html"];
-    [manager GET:KPhoto parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        ZPFLog(@"%lld",downloadProgress.totalUnitCount);
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        ZPFLog(@"%@",responseObject);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        ZPFLog(@"%@",error);
-    }];
-    
-    
-    
-    
-    
-    
-    
-    
-}
 
 
 

@@ -28,13 +28,7 @@
 -(void)customView{
     
     self.imageCell=[[UIImageView alloc]initWithFrame:CGRectMake(2, 0, KScreenWidth/3-5-4, KScreenHeight/3-10-20)];
-    
-    
-    
-    
-    
-    
-    self.imageCell.backgroundColor=[UIColor whiteColor];
+   self.imageCell.backgroundColor=[UIColor whiteColor];
     
     self.updataLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, self.imageCell.frame.size.height-20, self.imageCell.frame.size.width, 20)];
     

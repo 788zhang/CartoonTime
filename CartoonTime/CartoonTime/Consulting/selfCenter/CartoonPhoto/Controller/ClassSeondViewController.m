@@ -12,6 +12,8 @@
 #import "ClassCollectionViewCell.h"
 
 
+#import "DetailViewController.h"
+
 
 
 
@@ -212,8 +214,8 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
     
-    
-  
+    DetailViewController *detail=[[DetailViewController alloc]init];
+    [self.navigationController pushViewController:detail animated:YES];
     
     
     

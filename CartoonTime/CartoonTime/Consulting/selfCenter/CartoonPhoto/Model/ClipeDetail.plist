@@ -1,0 +1,240 @@
+{
+code = 0;
+error = "";
+extraInfo =     {
+countTotal = 12;
+currentAlbumId = 239066;
+lastChapterId = "<null>";
+    nextChapterId = 8996;
+    otherTitle = "";
+    otherType = 0;
+    totalChapterSize = 6856278;
+    };
+    params =     {
+    "REQUEST_METHOD" = GET;
+    chapterId = 8995;
+    isSize = 1;
+    orderType = 1;
+    page = 1;
+    r = "cartoonChapter/albumList";
+    size = 10;
+    };
+    results =     (
+    {
+    cartoonId = 235;
+    cartoonName = "\U6781\U901f\U7eef\U95fb";
+    chapterId = 8995;
+    chapterIndex = 1;
+    chapterName = "\U7b2c1\U8bdd";
+    createTime = "2015-12-29 12:50:03";
+    id = 239066;
+    images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/f28c62e1903e5ea190ecfae061dd9050_452287.jpg";
+    imgHeight = 993;
+    imgSize = 452287;
+    imgWidth = 700;
+    mineType = "";
+    modifyTime = "2015-12-29 12:50:03";
+    priority = 1;
+    status = 1;
+    userID = 52213;
+    },
+    {
+    cartoonId = 235;
+    cartoonName = "\U6781\U901f\U7eef\U95fb";
+    chapterId = 8995;
+    chapterIndex = 1;
+    chapterName = "\U7b2c1\U8bdd";
+    createTime = "2015-12-29 12:50:03";
+    id = 239067;
+    images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/5b7855df9bf28538f11369467e65bae4_665209.jpg";
+    imgHeight = 993;
+    imgSize = 665209;
+    imgWidth = 700;
+    mineType = "";
+    modifyTime = "2015-12-29 12:50:03";
+    priority = 2;
+    status = 1;
+    userID = 52213;
+    },
+    {
+    cartoonId = 235;
+    cartoonName = "\U6781\U901f\U7eef\U95fb";
+    chapterId = 8995;
+    chapterIndex = 1;
+    chapterName = "\U7b2c1\U8bdd";
+    createTime = "2015-12-29 12:50:04";
+    id = 239068;
+    images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/8f4f6b1c01f5b8fc625430b241342d16_658493.jpg";
+    imgHeight = 993;
+    imgSize = 658493;
+    imgWidth = 700;
+    mineType = "";
+    modifyTime = "2015-12-29 12:50:04";
+    priority = 3;
+    status = 1;
+    userID = 52213;
+    },
+    {
+    cartoonId = 235;
+    cartoonName = "\U6781\U901f\U7eef\U95fb";
+    chapterId = 8995;
+    chapterIndex = 1;
+    chapterName = "\U7b2c1\U8bdd";
+    createTime = "2015-12-29 12:50:04";
+    id = 239069;
+    images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/95b0fcf77a222c8dc054f365c72962f7_661492.jpg";
+    imgHeight = 993;
+    imgSize = 661492;
+    imgWidth = 700;
+    mineType = "";
+    modifyTime = "2015-12-29 12:50:04";
+    priority = 4;
+    status = 1;
+    userID = 52213;
+    },
+    {
+    cartoonId = 235;
+    cartoonName = "\U6781\U901f\U7eef\U95fb";
+    chapterId = 8995;
+    chapterIndex = 1;
+    chapterName = "\U7b2c1\U8bdd";
+    createTime = "2015-12-29 12:50:04";
+    id = 239070;
+    images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/43968a5885bd1fadf0a17a3a736ba608_538092.jpg";
+    imgHeight = 993;
+    imgSize = 538092;
+    imgWidth = 700;
+    mineType = "";
+    modifyTime = "2015-12-29 12:50:04";
+    priority = 5;
+    status = 1;
+    userID = 52213;
+    },
+    {
+    cartoonId = 235;
+    cartoonName = "\U6781\U901f\U7eef\U95fb";
+    chapterId = 8995;
+    chapterIndex = 1;
+    chapterName = "\U7b2c1\U8bdd";
+    createTime = "2015-12-29 12:50:05";
+    id = 239071;
+    images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/b437d2dc70196ebc3ea5e8a3f11724ea_523684.jpg";
+    imgHeight = 993;
+    imgSize = 523684;
+    imgWidth = 700;
+    mineType = "";
+    modifyTime = "2015-12-29 12:50:05";
+    priority = 6;
+    status = 1;
+    userID = 52213;
+    },
+    {
+    cartoonId = 235;
+    cartoonName = "\U6781\U901f\U7eef\U95fb";
+    chapterId = 8995;
+    chapterIndex = 1;
+    chapterName = "\U7b2c1\U8bdd";
+    createTime = "2015-12-29 12:50:05";
+    id = 239072;
+    images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/4fc22c49984f4fa9c892c5653a50488a_484840.jpg";
+    imgHeight = 993;
+    imgSize = 484840;
+    imgWidth = 700;
+    mineType = "";
+    modifyTime = "2015-12-29 12:50:05";
+    priority = 7;
+    status = 1;
+    userID = 52213;
+    },
+    {
+    cartoonId = 235;
+    cartoonName = "\U6781\U901f\U7eef\U95fb";
+    chapterId = 8995;
+    chapterIndex = 1;
+    chapterName = "\U7b2c1\U8bdd";
+    createTime = "2015-12-29 12:50:05";
+    id = 239073;
+    images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/72850b92dcb6899866bc238b1a3fad14_641055.jpg";
+    imgHeight = 993;
+    imgSize = 641055;
+    imgWidth = 700;
+    mineType = "";
+    modifyTime = "2015-12-29 12:50:05";
+    priority = 8;
+    status = 1;
+    userID = 52213;
+    },
+    {
+    cartoonId = 235;
+    cartoonName = "\U6781\U901f\U7eef\U95fb";
+    chapterId = 8995;
+    chapterIndex = 1;
+    chapterName = "\U7b2c1\U8bdd";
+    createTime = "2015-12-29 12:50:06";
+    id = 239074;
+    images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/3819ab0f9306e9bf8169877da6d7df6a_609814.jpg";
+    imgHeight = 993;
+    imgSize = 609814;
+    imgWidth = 700;
+    mineType = "";
+    modifyTime = "2015-12-29 12:50:06";
+    priority = 9;
+    status = 1;
+    userID = 52213;
+    },
+    {
+    cartoonId = 235;
+    cartoonName = "\U6781\U901f\U7eef\U95fb";
+    chapterId = 8995;
+    chapterIndex = 1;
+    chapterName = "\U7b2c1\U8bdd";
+    createTime = "2015-12-29 12:50:06";
+    id = 239075;
+    images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/442ceebc1d7608310ba2ed87f2cabdba_554360.jpg";
+    imgHeight = 993;
+    imgSize = 554360;
+    imgWidth = 700;
+    mineType = "";
+    modifyTime = "2015-12-29 12:50:06";
+    priority = 10;
+    status = 1;
+    userID = 52213;
+    },
+    {
+    cartoonId = 235;
+    cartoonName = "\U6781\U901f\U7eef\U95fb";
+    chapterId = 8995;
+    chapterIndex = 1;
+    chapterName = "\U7b2c1\U8bdd";
+    createTime = "2015-12-29 12:50:07";
+    id = 239076;
+    images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/1c4f235ef1d2d1cc0ed6565b72826579_598945.jpg";
+    imgHeight = 993;
+    imgSize = 598945;
+    imgWidth = 700;
+    mineType = "";
+    modifyTime = "2015-12-29 12:50:07";
+    priority = 11;
+    status = 1;
+    userID = 52213;
+    },
+    {
+    cartoonId = 235;
+    cartoonName = "\U6781\U901f\U7eef\U95fb";
+    chapterId = 8995;
+    chapterIndex = 1;
+    chapterName = "\U7b2c1\U8bdd";
+    createTime = "2015-12-29 12:50:07";
+    id = 239077;
+    images = "http://7xkbpd.com2.z0.glb.qiniucdn.com/0c5b3ab0033325ce22d08a97a1fed5c5_468007.jpg";
+    imgHeight = 993;
+    imgSize = 468007;
+    imgWidth = 700;
+    mineType = "";
+    modifyTime = "2015-12-29 12:50:07";
+    priority = 12;
+    status = 1;
+    userID = 52213;
+    }
+    );
+}

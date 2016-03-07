@@ -6,5 +6,6 @@ pod 'Masonry', '~> 0.6.1'
 pod 'Reachability', '~> 3.2'
 pod 'ODRefreshControl', '~> 1.1.0'
 pod 'BlocksKit', '~> 2.2.5'
-
+pod 'BmobSDK'
 pod 'SVPullToRefresh'
+
