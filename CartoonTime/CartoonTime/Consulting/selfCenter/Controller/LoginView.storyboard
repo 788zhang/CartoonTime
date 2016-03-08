@@ -121,7 +121,7 @@
                                 </state>
                                 <connections>
                                     <action selector="forgetPasswordBtn:" destination="Wrz-bB-DgZ" eventType="touchUpInside" id="ph4-Jo-AKS"/>
-                                    <segue destination="7sX-E5-MkK" kind="custom" id="hGL-ic-HVB"/>
+                                    <segue destination="7sX-E5-MkK" kind="show" id="zn4-Bq-7QE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="439-9W-qRk">
@@ -156,7 +156,7 @@
                                 </state>
                                 <connections>
                                     <action selector="registerBtn:" destination="Wrz-bB-DgZ" eventType="touchUpInside" id="VJ9-UZ-x0v"/>
-                                    <segue destination="DeR-Ph-Bur" kind="presentation" id="PCN-jp-TxQ"/>
+                                    <segue destination="DeR-Ph-Bur" kind="show" id="cVi-T4-IQo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfb-jv-Quf">

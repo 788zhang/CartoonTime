@@ -11,7 +11,7 @@
 #import "MJRefresh.h"
 #import "ClassCollectionViewCell.h"
 
-
+#import "ListAndCommentViewController.h"
 #import "DetailViewController.h"
 
 
@@ -214,8 +214,13 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
     
-    DetailViewController *detail=[[DetailViewController alloc]init];
-    [self.navigationController pushViewController:detail animated:YES];
+    ListAndCommentViewController *list=[[ListAndCommentViewController alloc]init];
+    
+    ClassModel *model=self.cellArr[indexPath.row];
+    list.myid=model.myid;
+    
+    [self.navigationController pushViewController:list animated:YES];
+    
     
     
     

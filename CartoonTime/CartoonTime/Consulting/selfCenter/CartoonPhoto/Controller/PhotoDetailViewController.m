@@ -1,43 +1,37 @@
 //
-//  DetailViewController.m
+//  PhotoDetailViewController.m
 //  CartoonTime
 //
-//  Created by scjy on 16/3/7.
+//  Created by scjy on 16/3/8.
 //  Copyright © 2016年 张鹏飞. All rights reserved.
 //
 
-#import "DetailViewController.h"
-#import "EndImageModel.h"
+#import "PhotoDetailViewController.h"
+
 #import "DetailCollectionViewCell.h"
+#import "ClassModel.h"
 
 
-@interface DetailViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+
+@interface PhotoDetailViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+
+
+
 @property(nonatomic, strong) UICollectionView *collectionView;
 @property(nonatomic, strong) NSMutableArray *headViewArr;
 @property(nonatomic, strong) NSMutableArray *cellViewArr;
 @property(nonatomic, strong) NSDictionary *headViewDic;
 
-
-
-
 @end
-
-@implementation DetailViewController
+@implementation PhotoDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-    self.automaticallyAdjustsScrollViewInsets=YES;
-   
+    // Do any additional setup after loading the view.
+    self.title=@"图片详情";
     [self getNetData];
     
 }
-
-
-
-
-
-
 
 
 #pragma mark ---lazy Loading
@@ -56,9 +50,9 @@
     if (_collectionView == nil) {
         
         UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc]init];
-        //设置布局方向(默认是垂直方向)
-        layout.scrollDirection=UICollectionViewScrollDirectionVertical;
-       
+        //设置布局方向(默认是水平方向)
+        layout.scrollDirection=UICollectionViewScrollDirectionHorizontal;
+        
         
         //设置每一行的间距
         layout.minimumLineSpacing=1;
@@ -66,9 +60,9 @@
         //设置item的间距
         layout.minimumInteritemSpacing=10;
         
-       
-     
-//        //设置每个item的大小
+        
+        
+        //        //设置每个item的大小
         layout.itemSize=CGSizeMake(KScreenWidth, KScreenHeight);
         
         self.collectionView=[[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight) collectionViewLayout:layout];
@@ -76,13 +70,13 @@
         //设置代理
         self.collectionView.dataSource=self;
         self.collectionView.delegate=self;
-
-//        //注册cell
+        
+        //        //注册cell
         [self.collectionView registerClass:[DetailCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
         
         
         
-        }
+    }
     
     return _collectionView;
 }
@@ -97,14 +91,14 @@
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-
+    
     DetailCollectionViewCell *cell=(DetailCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
-    EndImageModel *model=self.cellViewArr[indexPath.row];
+    ClassModel *model=self.cellViewArr[indexPath.row];
     
-   
+    
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.images] placeholderImage:nil];
-       
+    
     return cell;
     
     
@@ -122,30 +116,26 @@
 #pragma mark --- 网络请求
 -(void)getNetData{
     
+    
     AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes=[NSSet setWithObject:@"text/html"];
-    [manager GET:[NSString stringWithFormat:@"%@chapterId=%@&",KNewClipe,self.myid]  parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [manager GET:KPhoto parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         ZPFLog(@"%lld",downloadProgress.totalUnitCount);
+        
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         ZPFLog(@"%@",responseObject);
-        NSDictionary *rootDic=responseObject;
-        NSArray *result=rootDic[@"results"];
+        
+        NSDictionary *dic=responseObject;
+        NSArray *result=dic[@"results"];
         for (NSDictionary *dic in result) {
-            EndImageModel *model=[[EndImageModel alloc]init];
+            ClassModel *model=[[ClassModel alloc]init];
+            
             [model setValuesForKeysWithDictionary:dic];
-            
             [self.cellViewArr addObject:model];
-            
-            
             
         }
         
-        
-        
-        
-        
         [self.view addSubview:self.collectionView];
-        
         [self.collectionView reloadData];
         
         
@@ -154,12 +144,11 @@
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         ZPFLog(@"%@",error);
-        
     }];
     
     
-    
 }
+
 
 
 

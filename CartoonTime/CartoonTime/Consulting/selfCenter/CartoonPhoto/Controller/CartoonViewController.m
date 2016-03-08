@@ -12,6 +12,9 @@
 #import "ClassSeondViewController.h"
 #import "CartoonCollectionViewCell.h"
 #import "MJRefresh.h"
+#import "DetailViewController.h"
+#import "PhotoDetailViewController.h"
+#import "SearchViewController.h"
 
 @interface CartoonViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
@@ -48,8 +51,24 @@
     
     
     
+    
+    
+    UIBarButtonItem *rightbtn=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchContent)];
+    
+    self.navigationItem.rightBarButtonItem=rightbtn;
+    
+ }
 
+
+-(void)searchContent{
+    
+    SearchViewController *serach=[[SearchViewController alloc]init];
+    
+    [self.navigationController pushViewController:serach animated:YES];
+    
+    
 }
+
 
 
 #pragma mark --- lazy Loading 
@@ -333,14 +352,24 @@
     
    
     
+    if ([self.urlString isEqualToString:Kclass]) {
+        
+        ClassSeondViewController *class=[[ClassSeondViewController alloc]init];
+        class.model=self.classArr[indexPath.row];
+        [self.navigationController pushViewController:class animated:YES];
+   
+    }else if([self.urlString isEqualToString:KPhoto]){
+   
+        PhotoDetailViewController *photo=[[PhotoDetailViewController alloc]init];
+        
+        [self.navigationController pushViewController:photo animated:YES];
+        
+        
+    }
+
     
-    ClassSeondViewController *class=[[ClassSeondViewController alloc]init];
-    
-    class.model=self.classArr[indexPath.row];
     
     
-    
-    [self.navigationController pushViewController:class animated:YES];
     
     
     

@@ -25,9 +25,20 @@
 
 //最新上架  拼接  id=21&page=2&
 #define KnewOut @"http://api.playsm.com/index.php?r=cartoonCategory%2FgetCartoonSetListByCategory&size=12&"
-#define KNewClipe @"http://api.playsm.com/index.php?isSize=1&page=1&orderType=1&r=cartoonChapter%2FalbumList&size=10&chapterId=8995&"
 
-#define Kclipe @"http://api.playsm.com/index.php?&r=cartoonSet%2Fdetail&id=325"
+//最新界面的末页chapterId=8995&   
+#define KNewClipe @"http://api.playsm.com/index.php?isSize=1&page=1&orderType=1&r=cartoonChapter%2FalbumList&size=10&"
+
+//最新框架点击进入的界面  &id=325
+#define Kclipe @"http://api.playsm.com/index.php?&r=cartoonSet%2Fdetail"
+
+
+//搜索列单
+#define Klist @"http://api.playsm.com/index.php?r=prettyImages%2FgetLabelList&"
+
+//搜索http://api.playsm.com/index.php?lastCount=10102&page=1&r=prettyImages%2Flist&searchLabel=%E7%BE%8E%E5%B0%91%E5%A5%B3&
+
+#define kSearch @"http://api.playsm.com/index.php?lastCount=10102&page=1&r=prettyImages%2Flist&searchLabel="
 
 
 
